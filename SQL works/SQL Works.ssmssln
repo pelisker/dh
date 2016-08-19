@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "SQL Works", "SQL Works.ssmssqlproj", "{5F68BDBE-5B86-4B60-8404-F9710C54A54A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		По умолчанию|Default = По умолчанию|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5F68BDBE-5B86-4B60-8404-F9710C54A54A}.По умолчанию|Default.ActiveCfg = По умолчанию
+		{00000000-0000-0000-0000-000000000000}.По умолчанию|Default.ActiveCfg = По умолчанию
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
