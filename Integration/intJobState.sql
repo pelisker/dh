@@ -16,6 +16,7 @@ CREATE TABLE [dbo].[intJobState](
 	[Name] [nvarchar](2000) NULL,
 	[lastRun] datetime NULL,
 	[lastDate] datetime NULL,
+	[Result] [nvarchar](2000) NULL,
 	[Error] [nvarchar](2000) NULL,
 	[success] bit,
  CONSTRAINT [PK_intJobState] PRIMARY KEY CLUSTERED 
