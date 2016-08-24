@@ -42,15 +42,15 @@ DECLARE
 	IF @hr <> 0 GOTO CLEANUP
 	
 	--Логин
-	SET @url='https://api.comagic.ru/api/login/?login=comagic@silversite.ru&password=Chegevara1981'
+	SET @url='https://api.comagic.ru/api/login/'
 	EXEC @hr = sp_OAMethod @object, 'open',NULL, 'POST', @url, 'False'
 	IF @hr <> 0 GOTO CLEANUP
 
-	EXEC @hr = sp_OAMethod @object, 'SetRequestHeader', NULL, 'content-type', 'text/html; charset=windows-1251;'
+	EXEC @hr = sp_OAMethod @object, 'SetRequestHeader', NULL, 'content-type', 'application/x-www-form-urlencoded; charset=windows-1251;'
 	IF @hr <> 0 GOTO CLEANUP
 
 
-	EXEC @hr = sp_OAMethod @object, 'send',NULL
+	EXEC @hr = sp_OAMethod @object, 'send',NULL,'login=comagic@silversite.ru&password=kuy1r32dfg'
 	IF @hr <> 0 GOTO CLEANUP
 	EXEC @hr = sp_OAGetProperty @object, 'status', @status OUT
 	IF @hr <> 0 GOTO CLEANUP
@@ -67,7 +67,7 @@ DECLARE
 		GOTO CLEANUP
 	END
 	set @output=(select CAST(response AS nvarchar(max)) from @Response)
-	--select 1, @output
+	select 1, @output
 
 	
 	set @ssid=SUBSTRING(@output,27,32)
