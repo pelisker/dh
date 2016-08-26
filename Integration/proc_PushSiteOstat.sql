@@ -26,16 +26,32 @@ DECLARE
 	IF not exists(SELECT * FROM intJobState WHERE code=@id)
 		INSERT INTO intJobState (code,Name,lastDate) VALUES (@id ,'Обновление остатка на сайте.', GETDATE())
 
-
 	
 	SELECT @lastDate=ISNULL(lastDate,GETDATE()) FROM intJobState WHERE code=@id 
 
-	SELECT top 10 tovar, quantity=SUM(quantity) INTO #log 
+	--SELECT top 10 tovar, quantity=SUM(quantity) INTO #log 
+	--FROM uchet.dbo.ostatq_hist 
+	--WHERE date>@lastDate AND account='29' AND lot=0 AND company NOT IN (116) 
+	--GROUP BY tovar
+	----ORDER BY date 
+
+	;WITH tovars AS (
+	SELECT 
+		top 10 tovar, 
+		date=MAX(date) 
 	FROM uchet.dbo.ostatq_hist 
-	WHERE date>@lastDate AND account='29' AND lot=0 AND company NOT IN (116) 
+	WHERE 
+	date>@lastDate AND 
+	account='29' AND lot=0 AND company NOT IN (116) 
 	GROUP BY tovar
-	--ORDER BY date 
-	
+	ORDER BY 2)
+	SELECT t.tovar, t.date
+	, quantity=ISNULL(o.ost,0)
+	, way=ISNULL(o.way,0)
+	INTO #log 
+	FROM uchet.dbo.vIMOstat o
+	INNER JOIN tovars t ON t.tovar=o.code
+
 	SET @row_cnt=@@ROWCOUNT
 	IF @row_cnt=0
 		BEGIN
@@ -47,20 +63,20 @@ DECLARE
 	ELSE
 		BEGIN
 			SELECT @json=@json+N' 
-{"articul": '+CAST(tovar AS varchar(10))+', "quantity": '+ CAST(quantity AS varchar(10))+', "way": '+ CAST(quantity AS varchar(10))+'},'
+{"articul": '+CAST(tovar AS varchar(10))+', "quantity": '+ CAST(CAST(quantity AS int) AS varchar(10))+', "way": '+ CAST(CAST(way AS int) AS varchar(10))+'},'
 			FROM #log
-			GROUP BY tovar
 
+--select * from #log
 			SET @json=LEFT(@json,LEN(@json)-1)+N'
 ]}'
 			print @json
 			
 			UPDATE intJobState 
-			SET lastRun=GETDATE(), lastDate=(SELECT top 1 date FROM #log ORDER BY DATE desc), Result='Обновлено ' +CAST(@row_cnt AS varchar(10))+' записей', success=1
+			SET lastRun=GETDATE(), lastDate=(SELECT max(date) FROM #log), Result='Обновлено ' +CAST(@row_cnt AS varchar(10))+' записей', success=1
 			WHERE code=@id 
 		END
 		
-	
+
 --Пример json массива
 --{
 --	"contents": [
@@ -69,33 +85,16 @@ DECLARE
 --	]
 -- }
 
-return
-
-DECLARE
-@date1 datetime,
-@date2 datetime
-
-
 DECLARE 
 	@url varchar(max),
 	@proxy varchar(30)=NULL, 
-	@region int,  
 	@output nvarchar(max),
-	@client_id varchar(10)='14509',
-	@site_id varchar(10)='10991',
-	@date_from varchar(20) = REPLACE(CONVERT(varchar(20),@date1,120),' ','%20'),
-	@date_till varchar(20)= REPLACE(CONVERT(varchar(20),@date2,120),' ','%20'),
 	@object int, 
 	@hr int,
-	@ssid varchar(100),
-	@status int, 
-	@rt char(200), 
-	@doc varchar(max)
+	@status int 
 	DECLARE @Response TABLE (response varchar(max))
 	DECLARE @Source varchar(255), @Desc varchar(255);
 
-	SET @date1=ISNULL(@date1,GETDATE())
-	SET @date2=ISNULL(@date2,GETDATE())
 
 --Пример работы с web сервисом
 --http://www.sql.ru/forum/576338/konnektor-k-veb-sluzhbam-ms-sql-2000?hl=sp_oacreate#5988363
@@ -129,12 +128,12 @@ DECLARE
 	EXEC @hr = sp_OAMethod @object, 'SetRequestHeader', NULL, 'content-type', 'application/x-www-form-urlencoded; charset=utf-8;'
 	IF @hr <> 0 GOTO CLEANUP
 
-	DECLARE @send nvarchar(max)='{"key":"64011b8d6c9c7d3d4ddf826a5737a1d0","product":[{"articul":49758,"quantity":18,"way":0},{"articul":49758,"quantity":18,"way":1}]}'
+	--DECLARE @send nvarchar(max)='{"key":"64011b8d6c9c7d3d4ddf826a5737a1d0","product":[{"articul":49758,"quantity":18,"way":0},{"articul":49758,"quantity":18,"way":1}]}'
 	--N'{"key":"64011b8d6c9c7d3d4ddf826a5737a1d0","product":{"articul":49758,"quantity":18},{"articul":49758,"quantity":18}}'
 	--'{"Name":"Oleg","last_name":"Ivanov","amount":2}'
 	--'"Content"="key"=64011b8d6c9c7d3d4ddf826a5737a1d0,"product"=array(array("articul"=49758,"quantity"=18,"way"=0),array("articul"=49758,"quantity"=18,"way"=0))'
 
-	EXEC @hr = sp_OAMethod @object, 'send', NULL, @send
+	EXEC @hr = sp_OAMethod @object, 'send', NULL, @json
 	IF @hr <> 0 GOTO CLEANUP
 	
 	EXEC @hr = sp_OAGetProperty @object, 'status', @status OUT
