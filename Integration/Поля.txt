@@ -1,0 +1,67 @@
+Сделать список полей для интеграции по кореспондентам и заказам.
+
+Клиенты.
+	ID клиента AMOcrm
+	ID клиента интернет магазина(если лид пришел из интернет магазина).
+	ID клиента comagic(если клиент пришел из comagic)
+	папка: [upcode] [int] NOT NULL,
+	[name] [char](80) NOT NULL,
+	полное наименование: [company] [varchar](250) NOT NULL,
+	[inn] [char](20) NOT NULL,
+	[kpp] [varchar](20) NOT NULL,
+	[bank] [varchar](600) NULL,
+	бик: [kod_mfo] [char](15) NOT NULL,
+	расчетный счет: [acc1] [char](20) NOT NULL,
+	кор счет: [acc2] [char](20) NOT NULL,
+	[phone] [varchar](150) NOT NULL,
+	[email] [varchar](100) NOT NULL,
+	[address] [varchar](500) NULL,
+	Регион: [region] [int] NOT NULL,
+	Фактический адрес: [RealAddres] [varchar](500) NULL
+	менеджер varchar
+	сайт [compSite] [varchar](100) NULL,
+	контактное лицо [compContact] [varchar](150) NULL,
+	должность [compContactPost] [varchar](50) NULL,
+	список тегов [tags] [varchar](2000) NULL,
+	тип компании [compType] [tinyint] NULL,
+	
+Контакт(связан с клиентом):
+	фамилия [persSurname] [varchar](50) NULL,
+	имя [persName] [varchar](50) NULL,
+	отчество [persPatronymic] [varchar](50) NULL,
+	день рождения [persDate] [smalldatetime] NULL,
+	пол [persGender] [tinyint] NULL,
+	телефон [persPhone] [varchar](50) NULL,
+	почта [persEmail] [varchar](100) NULL,
+	город [persCity] [varchar](100) NULL,
+
+	
+
+Сделки.
+	ID сделки AMOcrm.
+	ID сделки интернет магазина(если лид пришел из интернет магазина).
+	ID сделки comagic(если лид пришел из comagic).
+	Источник. (корзина, телефон)
+	[date] [datetime] NOT NULL,
+	Дата доставки: [date2] [datetime] NULL,
+	Номер: [nn] [varchar](15) NOT NULL,
+	Менеджер: [dogovor] [int] NOT NULL,
+	ID crm клиента
+	Наше юр.лицо:[c_from] [int] NOT NULL,
+	Комментарий к сделке [name] [varchar](150) NOT NULL,
+	ФИО для доставки [ai_name] [varchar](250) NULL,
+	Телефон доставки 1: [ai_phone1] [varchar](64) NULL,
+	Телефон доставки 2: [ai_phone2] [varchar](64) NULL,
+	Город доставки [ai_city] [varchar](128) NULL,
+	Адрес доствки [ai_street] [varchar](300) NULL,
+	Комментарий к доставке [ai_comment] [varchar](255) NULL,
+	Транспортная компания [ai_
+	[UtmSource] [varchar](200) NULL,
+	[UtmMedium] [varchar](200) NULL,
+	[UtmTerm] [varchar](200) NULL,
+	[UtmContent] [varchar](500) NULL,
+	[Referrer] [varchar](100) NULL,
+	[City] [varchar](50) NULL,
+	[TelIncoming] [varchar](50) NULL,
+	[IntID] [int] NULL,
+	[utm_campaign] [nvarchar](2000) NULL
