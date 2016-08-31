@@ -1,3 +1,4 @@
+use uchet
 GO
 /****** Object:  StoredProcedure [dbo].[toSV_intOrders]    Script Date: 08/26/2016 14:57:05 ******/
 SET ANSI_NULLS ON
@@ -10,11 +11,11 @@ GO
 -- Create date: 26.08.2016
 -- Description:	Проедура создания заказа
 -- =============================================
-CREATE PROCEDURE [dbo].[ad_AddOrder]
+CREATE PROCEDURE [dbo].[ad_SetOrder]
 (	
-	@id int
-	,@idInt int
-	,@idPhone int
+	@amoID int
+	,@intID int
+	,@comagicID int
 	,@date datetime
 	,@clientIDamo int
 	,@Manager varchar(100)
@@ -42,27 +43,17 @@ BEGIN
 
 	DECLARE @codes table (code int)
 
-	IF @id IS NULL
+	IF @amoID IS NULL
 		RETURN -1
 
 	DECLARE @clientID int, @managerID int, @c_from int, @nn varchar(20), @city int
 	
 	--Поиск клиента
-	SELECT
-		@clientID=c.code
-	FROM
-		company c (NOLOCK)
-	INNER JOIN
-		comparam cmp (NOLOCK)
-			ON c.code=cmp.upcode
-	WHERE 
-		/*Новое поле*/
-		cmp.intCode=@clientIDamo
-
 	--Если клиент не найден, то проставляется неизвестный покупатель.
-	--IF @clientid IS NULL
-	--	RETURN -1
-	SET @clientID=ISNULL(@clientID,1502)			
+	SET @clientID=ISNULL(
+		(SELECT c.code 
+			FROM company c (NOLOCK) INNER JOIN comparam cmp (NOLOCK) ON c.code=cmp.upcode 
+			WHERE cmp.amoID=@clientIDamo),1502)			
 
 	--Поиск менеджера
 	SET @managerID=ISNULL((SELECT code FROM dogovor (NOLOCK) WHERE name=@Manager),0)
@@ -74,7 +65,6 @@ BEGIN
 	SET @nn='1'
 	
 	exec uchet.dbo.InitProcess 555,0
-	
 	DECLARE @drcode int
 
 	--Если такого заказа еще нет, то создаем, иначе обновляем существующий.
@@ -82,7 +72,7 @@ BEGIN
 	FROM uchet.dbo.doc_ref dr (NOLOCK)
 		INNER JOIN uchet.dbo.DrfOrder dro (NOLOCK) ON dr.code=dro.upcode
 	/*Новое поле*/
-	WHERE dr.type_doc IN ('СчМК') AND dro.IntID=@id
+	WHERE dr.type_doc IN ('СчМК') AND dro.amoID=@amoID
 	IF @drcode IS NULL
 	BEGIN
 		INSERT INTO uchet.dbo.doc_ref (owner, type_doc, nn, date, time, dogovor, c_from, c_to, name, serial, total)
@@ -152,14 +142,15 @@ BEGIN
 	--Обновление данных заказа
 	UPDATE uchet.dbo.DrfOrder
 	SET
-		amoID=@id,
-		intID=@idInt,
+		amoID=@amoID,
+		intID=@intID,
 		UtmSource=@utm_source,
 		UtmMedium=@utm_medium,
 		UtmTerm=@utm_term,
 		UtmContent=@utm_content,
 		utm_campaign=@utm_compaign,
 		Referrer=@referrer,
+		TelephonyID=@comagicID
 	WHERE 
 		upcode=@drcode
 
