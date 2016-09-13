@@ -1,0 +1,6 @@
+﻿GRANT CONNECT TO [BitrixUser];
+
+
+GO
+GRANT CONNECT TO [FSL\UchetSV];
+
