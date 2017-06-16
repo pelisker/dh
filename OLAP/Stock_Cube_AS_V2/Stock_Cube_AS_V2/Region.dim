@@ -1,0 +1,217 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="546496e5-f196-4c71-94fc-fa451050c37d" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Region Dim</ID>
+  <Name>Region</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-4883" scrolltop="-9393" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="11086" y="21511" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01cc0000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.2" tooltip="Region_Dim" left="20" top="0" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="3000" height="2725" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000b80b0000a50a0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_Region_Dim" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-4883</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-9393</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ARDiagramLayout</Name>
+      <Value>
+        <DiagramLayout ZoomPercent="100" ViewPortX="0" ViewPortY="0" xmlns="">
+          <Shapes NodeWidth="121">
+            <Shape Id="Id" Expanded="false">
+              <Attributes>
+                <Attribute Id="Id" />
+              </Attributes>
+              <Position x="20" y="20" />
+            </Shape>
+            <Shape Id="Name L3" Expanded="false">
+              <Attributes>
+                <Attribute Id="Name L3" />
+              </Attributes>
+              <Position x="176" y="20" />
+            </Shape>
+            <Shape Id="Name L2" Expanded="false">
+              <Attributes>
+                <Attribute Id="Name L2" />
+              </Attributes>
+              <Position x="176" y="68" />
+            </Shape>
+            <Shape Id="Name L1" Expanded="false">
+              <Attributes>
+                <Attribute Id="Name L1" />
+              </Attributes>
+              <Position x="176" y="116" />
+            </Shape>
+          </Shapes>
+        </DiagramLayout>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="c6a2a2df-3d22-4a62-a825-9cbbbcf67b5e">
+    <DataSourceViewID>OLAP DATA</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="3141ace1-1629-4a2a-b574-ec37edcd47bc">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="ae1e7c13-1b66-4062-8d4f-007a4aca88de">
+      <ID>Id</ID>
+      <Name>Id</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="35309b75-2f88-4cde-a237-ddebb65a448f">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9632bb53-3016-44ef-95aa-03af0ccbe069">
+            <TableID>dbo_Region_Dim</TableID>
+            <ColumnID>id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="734b50e7-8620-4e6e-9756-546d84245e30">
+          <AttributeID>Name L1</AttributeID>
+          <Name>Region Name L1</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="10897e78-1442-4ad2-b3dc-f8f2fb7594c8">
+          <AttributeID>Name L2</AttributeID>
+          <Name>Region Name L2</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="c481a013-0060-47ce-90ac-bf2d61af49e1">
+          <AttributeID>Name L3</AttributeID>
+          <Name>Region Name L3</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="03efde1a-c02e-40e2-be72-90b46cb1164c">
+      <ID>Name L1</ID>
+      <Name>Region Name L1</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3d766da7-0a87-4bc0-94bd-58f61ae9dc11">
+          <DataType>WChar</DataType>
+          <DataSize>150</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b911403e-3704-46e3-98e6-09c02d678c2c">
+            <TableID>dbo_Region_Dim</TableID>
+            <ColumnID>NameL1</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="c8323601-e8d0-4d30-b477-adc5f3e5f4f4">
+      <ID>Name L2</ID>
+      <Name>Region Name L2</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a72ef0e3-c788-4912-a567-1435834959fc">
+          <DataType>WChar</DataType>
+          <DataSize>150</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e13edb52-db39-4a5b-b697-a4609f22f89b">
+            <TableID>dbo_Region_Dim</TableID>
+            <ColumnID>NameL2</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="ffbc9fd3-c5dd-47ae-a755-8eba7d026688">
+      <ID>Name L3</ID>
+      <Name>Region Name L3</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a1cfef44-b779-4df4-9bd0-fdb6b9ba0e90">
+          <DataType>WChar</DataType>
+          <DataSize>150</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="989554f1-74f3-481d-bc7a-1684752decb8">
+            <TableID>dbo_Region_Dim</TableID>
+            <ColumnID>NameL3</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="5cf18c63-fb36-4542-96e7-ec9e341d71b4">
+      <ID>Hierarchy</ID>
+      <Name>Regions</Name>
+      <Levels>
+        <Level dwd:design-time-name="644bc1c2-d08f-4546-bb04-5ef0cc3afaad">
+          <ID>Region Name L1</ID>
+          <Name>L1</Name>
+          <SourceAttributeID>Name L1</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="cf7e3670-7803-4ea5-bb28-4362ab88ce1a">
+          <ID>Region Name L2</ID>
+          <Name>L2</Name>
+          <SourceAttributeID>Name L2</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="8e3aa762-493d-46ca-b27f-62e2c56a8817">
+          <ID>Region Name L3</ID>
+          <Name>L3</Name>
+          <SourceAttributeID>Name L3</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+</Dimension>

@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "Stock_Cube_AS_V2", "Stock_Cube_AS_V2\Stock_Cube_AS_V2.dwproj", "{8FEA9D89-5DE6-4E55-992B-0576055C583F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+		Production|Default = Production|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8FEA9D89-5DE6-4E55-992B-0576055C583F}.Development|Default.ActiveCfg = Development
+		{8FEA9D89-5DE6-4E55-992B-0576055C583F}.Development|Default.Build.0 = Development
+		{8FEA9D89-5DE6-4E55-992B-0576055C583F}.Development|Default.Deploy.0 = Development
+		{8FEA9D89-5DE6-4E55-992B-0576055C583F}.Production|Default.ActiveCfg = Production
+		{8FEA9D89-5DE6-4E55-992B-0576055C583F}.Production|Default.Build.0 = Production
+		{8FEA9D89-5DE6-4E55-992B-0576055C583F}.Production|Default.Deploy.0 = Production
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

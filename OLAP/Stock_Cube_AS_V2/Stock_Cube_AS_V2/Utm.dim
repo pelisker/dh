@@ -1,0 +1,215 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="f19a1f6b-966d-49a3-bd13-33bdf7160ff2" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Utm Dim</ID>
+  <Name>Utm</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-4875" scrolltop="-8758" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="12806" y="21511" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01cc0000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.2" tooltip="utm_Dim" left="20" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3016" height="3995" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000c80b00009b0f0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_utm_Dim" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-4875</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-8758</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="06138475-54c0-4398-aa2e-f282ff27bc29">
+    <DataSourceViewID>OLAP DATA</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="df472d88-8585-4569-b016-9eb9e9942acd">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="8e12e169-701b-487b-aaa4-f8e003394ebe">
+      <ID>ID</ID>
+      <Name>ID</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c57b3adb-c08d-480f-8bf4-1c34c2eed8ff">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="46808086-4507-4aca-84f9-a25ceece96d5">
+            <TableID>dbo_utm_Dim</TableID>
+            <ColumnID>ID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="998b7dfb-72c7-432f-8bb4-d39a25a7c113">
+          <AttributeID>Referrer</AttributeID>
+          <Name>UTM Referrer</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="406f764c-3e2c-415b-a0c6-af820b396f6c">
+          <AttributeID>Utm Source</AttributeID>
+          <Name>UTM Source</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="3ba20594-706d-401e-a2e6-edad402317f9">
+          <AttributeID>Utm Medium</AttributeID>
+          <Name>UTM Medium</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="4bd1d5a0-8e56-4822-9509-8f0f0f9c55d8">
+          <AttributeID>Utm Term</AttributeID>
+          <Name>UTM Term</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="149b9f6e-4001-4feb-be0e-007e30f9d0b9">
+          <AttributeID>Utm Content</AttributeID>
+          <Name>UTM Content</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="68e130df-1d3f-4891-b4bb-ace22f22a43f">
+          <AttributeID>Utm Campaign</AttributeID>
+          <Name>UTM Campaign</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="dcdb0ff1-e41e-4933-9ff5-69a03f165fb4">
+      <ID>Referrer</ID>
+      <Name>UTM Referrer</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4b8ff6a7-3240-4cec-a2ea-d0c1a394661f">
+          <DataType>WChar</DataType>
+          <DataSize>1024</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c9a7755b-9d3c-4d9c-a27d-64fa0b660d1f">
+            <TableID>dbo_utm_Dim</TableID>
+            <ColumnID>referrer</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="035f3d07-af73-4d7e-b974-7f9fc1491cf8">
+      <ID>Utm Source</ID>
+      <Name>UTM Source</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f50c2e23-1e28-4d6a-94b9-0d6ff58629ac">
+          <DataType>WChar</DataType>
+          <DataSize>500</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6f190eeb-1039-4d5a-9b43-2caa34858cb7">
+            <TableID>dbo_utm_Dim</TableID>
+            <ColumnID>utm_source</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="ba2d7015-115e-4750-931e-d0caa091f11e">
+      <ID>Utm Medium</ID>
+      <Name>UTM Medium</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="7f7415e9-ba4c-487b-894f-6db3cdc22b08">
+          <DataType>WChar</DataType>
+          <DataSize>1024</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="94e17fbf-611f-4104-849a-4d3c9aabd2e7">
+            <TableID>dbo_utm_Dim</TableID>
+            <ColumnID>utm_medium</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="609c4f35-db47-4170-a484-3d6b62d5bf90">
+      <ID>Utm Term</ID>
+      <Name>UTM Term</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="21f86b48-0dc8-4632-b59e-fbd736540c53">
+          <DataType>WChar</DataType>
+          <DataSize>1024</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="fec5c0f2-9472-43bf-87f5-1da33ae15396">
+            <TableID>dbo_utm_Dim</TableID>
+            <ColumnID>utm_term</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="407a23af-405a-4d8d-937f-d837489ca87f">
+      <ID>Utm Content</ID>
+      <Name>UTM Content</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e92ff0d8-8235-424a-9b2a-aed59441deb1">
+          <DataType>WChar</DataType>
+          <DataSize>500</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7f71a86a-50de-4ac0-8cee-7bef5161c29c">
+            <TableID>dbo_utm_Dim</TableID>
+            <ColumnID>utm_content</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="9ba1f436-4f67-4726-9bba-36f7dab23e4f">
+      <ID>Utm Campaign</ID>
+      <Name>UTM Campaign</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c9e07862-fe1e-400d-836c-3b59c302eab8">
+          <DataType>WChar</DataType>
+          <DataSize>1024</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9d65fcb4-424c-4651-a64d-5ac89c943922">
+            <TableID>dbo_utm_Dim</TableID>
+            <ColumnID>utm_campaign</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+    </Attribute>
+  </Attributes>
+</Dimension>
