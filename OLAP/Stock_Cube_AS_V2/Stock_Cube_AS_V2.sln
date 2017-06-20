@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
-Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "Stock_Cube_AS_V2", "Stock_Cube_AS_V2\Stock_Cube_AS_V2.dwproj", "{8FEA9D89-5DE6-4E55-992B-0576055C583F}"
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "Logistic_Cube", "Stock_Cube_AS_V2\Logistic_Cube.dwproj", "{8FEA9D89-5DE6-4E55-992B-0576055C583F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

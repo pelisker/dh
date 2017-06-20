@@ -1,6 +1,6 @@
 ﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="28364e23-c4df-4b1d-835a-e4577e26455b" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Dogovor Dim</ID>
-  <Name>Dogovor</Name>
+  <Name>Менеджеры</Name>
   <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
   <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
   <Annotations>
@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-4883" scrolltop="-9604" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="11086" y="21511" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-4883" scrolltop="-9604" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="10901" y="20717" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01cc0000900144420100065461686f6d61" />
             </font>
@@ -134,7 +134,7 @@
     </Attribute>
     <Attribute dwd:design-time-name="ecdaeda0-dde5-4e20-80e5-1eda28d5bd89">
       <ID>Name L1</ID>
-      <Name>Dogovor Name L1</Name>
+      <Name>Отдел</Name>
       <KeyColumns>
         <KeyColumn dwd:design-time-name="f48b4fe3-eaa5-4f9d-95d3-0984e0dec007">
           <DataType>WChar</DataType>
@@ -150,7 +150,7 @@
     </Attribute>
     <Attribute dwd:design-time-name="69fdeee3-62c7-41d7-93cf-6efaa1fd78b1">
       <ID>Name L2</ID>
-      <Name>Dogovor Name L2</Name>
+      <Name>Менеджер</Name>
       <KeyColumns>
         <KeyColumn dwd:design-time-name="c04f95d1-555a-4895-a62f-a3dd6c0df23e">
           <DataType>WChar</DataType>
@@ -168,16 +168,16 @@
   <Hierarchies>
     <Hierarchy dwd:design-time-name="a7450ff7-55cc-4a91-8a28-da07f38063a5">
       <ID>Hierarchy</ID>
-      <Name>Dogovor</Name>
+      <Name>Отделы</Name>
       <Levels>
         <Level dwd:design-time-name="0383344f-171e-4276-bb05-0f131c11c426">
           <ID>Dogovor Name L1</ID>
-          <Name>L1</Name>
+          <Name>Отдел</Name>
           <SourceAttributeID>Name L1</SourceAttributeID>
         </Level>
         <Level dwd:design-time-name="58ca2541-6943-49d7-ab3e-ff47c82025a1">
           <ID>Dogovor Name L2</ID>
-          <Name>L2</Name>
+          <Name>Менеджер</Name>
           <SourceAttributeID>Name L2</SourceAttributeID>
         </Level>
       </Levels>

@@ -1,6 +1,6 @@
 ﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="546496e5-f196-4c71-94fc-fa451050c37d" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Region Dim</ID>
-  <Name>Region</Name>
+  <Name>Регион</Name>
   <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
   <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
   <Annotations>
@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-4883" scrolltop="-9393" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="11086" y="21511" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-4883" scrolltop="-9393" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="10901" y="20717" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01cc0000900144420100065461686f6d61" />
             </font>
@@ -144,7 +144,7 @@
     </Attribute>
     <Attribute dwd:design-time-name="03efde1a-c02e-40e2-be72-90b46cb1164c">
       <ID>Name L1</ID>
-      <Name>Region Name L1</Name>
+      <Name>ФО</Name>
       <KeyColumns>
         <KeyColumn dwd:design-time-name="3d766da7-0a87-4bc0-94bd-58f61ae9dc11">
           <DataType>WChar</DataType>
@@ -160,7 +160,7 @@
     </Attribute>
     <Attribute dwd:design-time-name="c8323601-e8d0-4d30-b477-adc5f3e5f4f4">
       <ID>Name L2</ID>
-      <Name>Region Name L2</Name>
+      <Name>Область</Name>
       <KeyColumns>
         <KeyColumn dwd:design-time-name="a72ef0e3-c788-4912-a567-1435834959fc">
           <DataType>WChar</DataType>
@@ -176,7 +176,7 @@
     </Attribute>
     <Attribute dwd:design-time-name="ffbc9fd3-c5dd-47ae-a755-8eba7d026688">
       <ID>Name L3</ID>
-      <Name>Region Name L3</Name>
+      <Name>Населенный пункт</Name>
       <KeyColumns>
         <KeyColumn dwd:design-time-name="a1cfef44-b779-4df4-9bd0-fdb6b9ba0e90">
           <DataType>WChar</DataType>
@@ -194,21 +194,21 @@
   <Hierarchies>
     <Hierarchy dwd:design-time-name="5cf18c63-fb36-4542-96e7-ec9e341d71b4">
       <ID>Hierarchy</ID>
-      <Name>Regions</Name>
+      <Name>Регион</Name>
       <Levels>
         <Level dwd:design-time-name="644bc1c2-d08f-4546-bb04-5ef0cc3afaad">
           <ID>Region Name L1</ID>
-          <Name>L1</Name>
+          <Name>ФО</Name>
           <SourceAttributeID>Name L1</SourceAttributeID>
         </Level>
         <Level dwd:design-time-name="cf7e3670-7803-4ea5-bb28-4362ab88ce1a">
           <ID>Region Name L2</ID>
-          <Name>L2</Name>
+          <Name>Область</Name>
           <SourceAttributeID>Name L2</SourceAttributeID>
         </Level>
         <Level dwd:design-time-name="8e3aa762-493d-46ca-b27f-62e2c56a8817">
           <ID>Region Name L3</ID>
-          <Name>L3</Name>
+          <Name>Населенный пункт</Name>
           <SourceAttributeID>Name L3</SourceAttributeID>
         </Level>
       </Levels>

@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="32" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-12242" scrolltop="-495" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="97" x="37597" y="21511" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="32" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-12242" scrolltop="-2299" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="97" x="31247" y="20717" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01cc0000900144420100065461686f6d61" />
             </font>
@@ -268,7 +268,7 @@
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
-      <Value>-495</Value>
+      <Value>-2299</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
@@ -434,7 +434,7 @@
   <MeasureGroups>
     <MeasureGroup dwd:design-time-name="1a91e84a-63e5-45b6-9662-306340c3b00d">
       <ID>Sales Fact</ID>
-      <Name>Sales Fact</Name>
+      <Name>Продажи потоварно</Name>
       <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
       <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
       <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
@@ -442,9 +442,11 @@
       <Measures>
         <Measure dwd:design-time-name="73ffaffd-3b67-4c0c-9f01-108dbe3001aa">
           <ID>Quantity</ID>
-          <Name>Quantity</Name>
+          <Name>Количество</Name>
           <Source dwd:design-time-name="678286d8-0060-4584-9939-1e028b2e915d">
-            <DataType>Double</DataType>
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Format>0</Format>
             <Source xsi:type="ColumnBinding" dwd:design-time-name="90e496c0-0e5c-42c7-b512-3125d731b008">
               <TableID>dbo_Sales_fact</TableID>
               <ColumnID>quantity</ColumnID>
@@ -453,9 +455,10 @@
         </Measure>
         <Measure dwd:design-time-name="5363f290-ebc1-4bb0-bc3f-d5fcc9ed3929">
           <ID>Amount</ID>
-          <Name>Amount</Name>
+          <Name>Продажа</Name>
           <Source dwd:design-time-name="f574e2e2-fa1f-4b87-b49c-cba123db436f">
             <DataType>Double</DataType>
+            <Format># ##0,00;-# ##0,00</Format>
             <Source xsi:type="ColumnBinding" dwd:design-time-name="39df7eef-8485-45d6-b614-5cb924e2f8ff">
               <TableID>dbo_Sales_fact</TableID>
               <ColumnID>amount</ColumnID>
@@ -464,9 +467,10 @@
         </Measure>
         <Measure dwd:design-time-name="3e89824e-59c4-4da7-97ca-5cf836bd860c">
           <ID>Costamount</ID>
-          <Name>Cost Amount</Name>
+          <Name>Себестоимость</Name>
           <Source dwd:design-time-name="e29df108-3624-4b23-83e3-2ab272e5d6cc">
             <DataType>Double</DataType>
+            <Format># ##0,00;-# ##0,00</Format>
             <Source xsi:type="ColumnBinding" dwd:design-time-name="8e15cbf8-d76f-49b7-b291-aa85552cdbdd">
               <TableID>dbo_Sales_fact</TableID>
               <ColumnID>costamount</ColumnID>
@@ -475,9 +479,10 @@
         </Measure>
         <Measure dwd:design-time-name="17f25639-d475-4791-8355-37984d328c87">
           <ID>Profit</ID>
-          <Name>Profit</Name>
+          <Name>Прибыль</Name>
           <Source dwd:design-time-name="fb344584-1cce-407c-a5c3-be8bc1934534">
             <DataType>Double</DataType>
+            <Format># ##0,00;-# ##0,00</Format>
             <Source xsi:type="ColumnBinding" dwd:design-time-name="3c7b8f75-a516-4dc8-91a3-82ebeaa206a8">
               <TableID>dbo_Sales_fact</TableID>
               <ColumnID>profit</ColumnID>
@@ -486,11 +491,12 @@
         </Measure>
         <Measure dwd:design-time-name="2e4cabaa-b860-48ab-9923-f36a681e2b6e">
           <ID>Sales Fact Count</ID>
-          <Name>Sales Fact Count</Name>
+          <Name>Число продаж</Name>
           <AggregateFunction>Count</AggregateFunction>
           <Source dwd:design-time-name="3b3c3c02-aacc-4968-a71f-2d9ded693624">
             <DataType>Integer</DataType>
             <DataSize>4</DataSize>
+            <Format>0</Format>
             <Source xsi:type="RowBinding" dwd:design-time-name="5fda169c-37b4-4d6a-8353-433cbfd30fb1">
               <TableID>dbo_Sales_fact</TableID>
             </Source>
@@ -597,4 +603,30 @@
   <Source dwd:design-time-name="3888d931-503c-4489-8a03-269f25c0081c">
     <DataSourceViewID>OLAP DATA</DataSourceViewID>
   </Source>
+  <MdxScripts>
+    <MdxScript dwd:design-time-name="446364fd-4caa-4359-9bca-e90699b893bc">
+      <ID>MdxScript</ID>
+      <Name>MdxScript</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Commands>
+        <Command>
+          <Text>/*
+The CALCULATE command controls the aggregation of leaf cells in the cube.
+If the CALCULATE command is deleted or modified, the data within the cube is affected.
+You should edit this command only if you manually specify how the cube is aggregated.
+*/
+CALCULATE;     
+CREATE MEMBER CURRENTCUBE.[Measures].[Процент наценки]
+ AS IIF([Measures].[Себестоимость] &gt; 0,[Measures].[Прибыль] / [Measures].[Себестоимость], NULL ), 
+FORMAT_STRING = "0%", 
+VISIBLE = 1  ; 
+CREATE MEMBER CURRENTCUBE.[Measures].[Процент маржи]
+ AS IIF([Measures].[Продажа] &gt; 0,([Measures].[Прибыль]) / [Measures].[Продажа], NULL ), 
+FORMAT_STRING = "0%", 
+VISIBLE = 1  ; </Text>
+        </Command>
+      </Commands>
+    </MdxScript>
+  </MdxScripts>
 </Cube>

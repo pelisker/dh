@@ -1,6 +1,6 @@
 ﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="6acc938f-4c36-4a11-a0af-29351cc0448e" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Times Dim</ID>
-  <Name>Times</Name>
+  <Name>Время</Name>
   <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
   <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
   <Annotations>
@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-4716" scrolltop="-8255" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="11086" y="21511" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-4716" scrolltop="-8255" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="10901" y="20717" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01cc0000900144420100065461686f6d61" />
             </font>
@@ -165,7 +165,7 @@
     </Attribute>
     <Attribute dwd:design-time-name="a8cf63e2-16ff-4786-bc53-677229bc3c7f">
       <ID>Date</ID>
-      <Name>Date</Name>
+      <Name>Дата</Name>
       <Type>Date</Type>
       <KeyColumns>
         <KeyColumn dwd:design-time-name="561851ed-2ca7-47cc-9d32-42100306f605">
@@ -189,7 +189,7 @@
     </Attribute>
     <Attribute dwd:design-time-name="a4ab886b-be8a-4de8-84cf-b9127a1e89ea">
       <ID>Week</ID>
-      <Name>Week</Name>
+      <Name>Неделя</Name>
       <Type>WeekOfYear</Type>
       <KeyColumns>
         <KeyColumn dwd:design-time-name="4f996223-c561-4a17-83c2-1611af2d8121">
@@ -205,7 +205,7 @@
     </Attribute>
     <Attribute dwd:design-time-name="6530ae14-2f0a-45e2-bfd2-41567c028b37">
       <ID>Month</ID>
-      <Name>Month</Name>
+      <Name>Месяц</Name>
       <Type>MonthOfYear</Type>
       <KeyColumns>
         <KeyColumn dwd:design-time-name="6657eed4-f0bd-4420-b532-ded70a3f7112">
@@ -224,12 +224,13 @@
           <ColumnID>month</ColumnID>
         </Source>
       </NameColumn>
+      <OrderBy>Key</OrderBy>
       <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
     </Attribute>
     <Attribute dwd:design-time-name="a670b454-e508-43cb-babd-2cbd444fdcb2">
       <ID>Day Of Week</ID>
-      <Name>Day Of Week</Name>
+      <Name>День недели</Name>
       <Type>DayOfWeek</Type>
       <KeyColumns>
         <KeyColumn dwd:design-time-name="242cd6b5-df94-4ad1-9b98-4c6d400ae25d">
@@ -248,12 +249,13 @@
           <ColumnID>DayOfWeek</ColumnID>
         </Source>
       </NameColumn>
+      <OrderBy>Key</OrderBy>
       <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
     </Attribute>
     <Attribute dwd:design-time-name="a61daf99-24d5-48c6-a654-33f55dfd424d">
       <ID>Year</ID>
-      <Name>Year</Name>
+      <Name>Год</Name>
       <Type>Years</Type>
       <KeyColumns>
         <KeyColumn dwd:design-time-name="3a886c18-baad-4333-a370-e7d9f6a599e3">
@@ -271,42 +273,42 @@
   <Hierarchies>
     <Hierarchy dwd:design-time-name="f5a7bf22-e813-413f-bde9-f2dd5087ed08">
       <ID>Hierarchy</ID>
-      <Name>Period</Name>
+      <Name>Период</Name>
       <Levels>
         <Level dwd:design-time-name="c6a465e7-7112-424a-93d4-b2294ccab1e8">
           <ID>Year</ID>
-          <Name>Year</Name>
+          <Name>Год</Name>
           <SourceAttributeID>Year</SourceAttributeID>
         </Level>
         <Level dwd:design-time-name="643a8ce6-6306-47cd-83f0-b2c55d19423b">
           <ID>Month</ID>
-          <Name>Month</Name>
+          <Name>Месяц</Name>
           <SourceAttributeID>Month</SourceAttributeID>
         </Level>
         <Level dwd:design-time-name="44c1cd74-60fc-41ef-8b6e-03a8e997f5a6">
           <ID>Week</ID>
-          <Name>Week</Name>
+          <Name>Неделя</Name>
           <SourceAttributeID>Week</SourceAttributeID>
         </Level>
         <Level dwd:design-time-name="d7d6b138-185e-4f14-b0ce-fa0c6c051764">
           <ID>Date</ID>
-          <Name>Date</Name>
+          <Name>Дата</Name>
           <SourceAttributeID>Date</SourceAttributeID>
         </Level>
       </Levels>
     </Hierarchy>
     <Hierarchy dwd:design-time-name="9d5ee960-1c0c-4b47-8f90-766cfd99559f">
       <ID>Hierarchy 1</ID>
-      <Name>Hierarchy</Name>
+      <Name>Дни недели</Name>
       <Levels>
         <Level dwd:design-time-name="48113433-129c-4a4e-b27e-3f81730faae7">
           <ID>Day Of Week</ID>
-          <Name>Day Of Week</Name>
+          <Name>День недели</Name>
           <SourceAttributeID>Day Of Week</SourceAttributeID>
         </Level>
         <Level dwd:design-time-name="51bbc53e-a4b3-4ba6-8305-aa2960f9ef6b">
           <ID>Date</ID>
-          <Name>Date</Name>
+          <Name>Дата</Name>
           <SourceAttributeID>Date</SourceAttributeID>
         </Level>
       </Levels>

@@ -1,6 +1,6 @@
 ﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="2a23f42a-824c-4325-a37a-da1c513108d7" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Client Dim</ID>
-  <Name>Client</Name>
+  <Name>Клиенты</Name>
   <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
   <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
   <Annotations>
@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-4883" scrolltop="-9604" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="11086" y="21511" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-4883" scrolltop="-9604" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="10901" y="20717" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01cc0000900144420100065461686f6d61" />
             </font>
@@ -134,7 +134,7 @@
     </Attribute>
     <Attribute dwd:design-time-name="bb058d3f-a18b-4488-98c3-6829653d09a0">
       <ID>Name</ID>
-      <Name>Clien Name</Name>
+      <Name>Клиент</Name>
       <KeyColumns>
         <KeyColumn dwd:design-time-name="40b6cf19-9455-4573-8937-f5e9c0134099">
           <DataType>WChar</DataType>
@@ -150,7 +150,7 @@
     </Attribute>
     <Attribute dwd:design-time-name="71a3b20d-dcd1-4f98-820e-407e4d101706">
       <ID>Folder</ID>
-      <Name>Client Folder</Name>
+      <Name>Клиент_папка</Name>
       <KeyColumns>
         <KeyColumn dwd:design-time-name="5b76b102-a83a-4309-9620-666b151518f6">
           <DataType>WChar</DataType>
@@ -168,16 +168,16 @@
   <Hierarchies>
     <Hierarchy dwd:design-time-name="b696c033-1e59-4ff3-8bd5-1de8dc70ce78">
       <ID>Hierarchy</ID>
-      <Name>Clients</Name>
+      <Name>Клиенты</Name>
       <Levels>
         <Level dwd:design-time-name="4f0b74a8-0faa-4fb7-aed1-c57ce9a21c19">
           <ID>Client Folder</ID>
-          <Name>Folder</Name>
+          <Name>Клиент_папка</Name>
           <SourceAttributeID>Folder</SourceAttributeID>
         </Level>
         <Level dwd:design-time-name="d8a664ff-a663-49e1-94ed-74adcf7de803">
           <ID>Clien Name</ID>
-          <Name>Name</Name>
+          <Name>Клиент</Name>
           <SourceAttributeID>Name</SourceAttributeID>
         </Level>
       </Levels>
