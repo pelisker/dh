@@ -21,5 +21,25 @@
         </Partition>
       </Partitions>
     </MeasureGroup>
+    <MeasureGroup>
+      <ID>Ostatq Fact</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="5fb44a0a-83d7-44a0-b2e0-b43e2ecdb4fd">
+          <ID>Ostatq Fact</ID>
+          <Name>Ostatq Fact</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="b51e0228-2c91-4571-9c70-2fc4b2a72f0f">
+            <DataSourceViewID>OLAP DATA</DataSourceViewID>
+            <TableID>dbo_Ostatq_fact</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
   </MeasureGroups>
 </Cube>
