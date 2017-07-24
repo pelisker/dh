@@ -3,4 +3,9 @@
   <Name>ViewAll</Name>
   <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
   <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Members>
+    <Member>
+      <Name>DEEP\Veneta8</Name>
+    </Member>
+  </Members>
 </Role>
