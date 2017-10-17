@@ -41,25 +41,5 @@
         </Partition>
       </Partitions>
     </MeasureGroup>
-    <MeasureGroup>
-      <ID>Ostatq No Parcel Fact</ID>
-      <Partitions>
-        <Partition dwd:design-time-name="ce5a8deb-cceb-4899-92dd-390c6d3f4fe8">
-          <ID>Ostatq No Parcel Fact</ID>
-          <Name>Ostatq No Parcel Fact</Name>
-          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
-          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
-          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
-          <State>Unprocessed</State>
-          <Source xsi:type="DsvTableBinding" dwd:design-time-name="53c24768-83e0-459a-bd4f-83a7d527cf8d">
-            <DataSourceViewID>OLAP DATA</DataSourceViewID>
-            <TableID>Ostatq</TableID>
-          </Source>
-          <StorageMode>Molap</StorageMode>
-          <CurrentStorageMode>Molap</CurrentStorageMode>
-          <ProcessingMode>Regular</ProcessingMode>
-        </Partition>
-      </Partitions>
-    </MeasureGroup>
   </MeasureGroups>
 </Cube>
