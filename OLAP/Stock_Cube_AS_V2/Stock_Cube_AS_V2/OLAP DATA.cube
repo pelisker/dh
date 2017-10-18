@@ -731,7 +731,7 @@
       <Measures>
         <Measure dwd:design-time-name="2b7ed797-4358-4e3e-970f-29d014d856ab">
           <ID>Stock</ID>
-          <Name>Склад</Name>
+          <Name>Остаток по партиям</Name>
           <Source dwd:design-time-name="9e706afa-9fe3-4401-a3ba-9059f5efa485">
             <DataType>Double</DataType>
             <Source xsi:type="ColumnBinding" dwd:design-time-name="77c19b22-5069-4b1c-b45c-6d8ccde36d72">
