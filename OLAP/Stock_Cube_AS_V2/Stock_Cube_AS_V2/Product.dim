@@ -162,6 +162,10 @@
           <AttributeID>Class2</AttributeID>
           <Name>Class2</Name>
         </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="ae534f10-ae6f-436c-be55-e0e652735f9a">
+          <AttributeID>Manufacturer</AttributeID>
+          <Name>Фабрика</Name>
+        </AttributeRelationship>
       </AttributeRelationships>
       <OrderBy>Key</OrderBy>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
@@ -266,6 +270,21 @@
           <Source xsi:type="ColumnBinding" dwd:design-time-name="4130b27b-9828-4e02-8a95-e936c22b6b96">
             <TableID>dbo_Product_Dim</TableID>
             <ColumnID>Class2</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="5aaeff58-debb-4147-a9d1-08c0f6fbc76b">
+      <ID>Manufacturer</ID>
+      <Name>Фабрика</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="932ac8b1-14c2-432a-8f0a-e99e8c672e8e">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="27c727ef-e24e-4265-860e-da15f0bca5e0">
+            <TableID>dbo_Product_Dim</TableID>
+            <ColumnID>Manufacturer</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
