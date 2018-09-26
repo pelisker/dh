@@ -13,5 +13,8 @@
     <Member>
       <Name>DEEP\OLAP_USER</Name>
     </Member>
+    <Member>
+      <Name>DEEP\serg</Name>
+    </Member>
   </Members>
 </Role>
