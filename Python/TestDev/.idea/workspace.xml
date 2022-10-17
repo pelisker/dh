@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5307c600-a426-4fc5-9146-78463a45c826" name="Changes" comment="" />
+    <list default="true" id="5307c600-a426-4fc5-9146-78463a45c826" name="Changes" comment="Создал проект TestDev" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ChangesViewManager" show_ignored="true" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -28,7 +29,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "last_opened_file_path": "C:/Users/SQLZerg/Documents/GitHub"
+    "last_opened_file_path": "C:/Users/SQLZerg/Documents/GitHub/dh/Python/TestDev"
   }
 }]]></component>
   <component name="RunManager">
