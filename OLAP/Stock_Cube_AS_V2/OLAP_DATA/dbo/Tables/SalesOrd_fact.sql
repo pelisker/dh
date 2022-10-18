@@ -1,0 +1,26 @@
+﻿CREATE TABLE [dbo].[SalesOrd_fact] (
+    [date]                DATE           NOT NULL,
+    [date_rez]            DATE           NOT NULL,
+    [id]                  INT            NOT NULL,
+    [nn]                  VARCHAR (20)   NOT NULL,
+    [managerID]           INT            NOT NULL,
+    [clientID]            INT            NOT NULL,
+    [regionID]            INT            NOT NULL,
+    [utm_source]          VARCHAR (2000) NULL,
+    [utm_medium]          VARCHAR (2000) NULL,
+    [utm_term]            VARCHAR (2000) NULL,
+    [utm_campaign]        VARCHAR (2000) NULL,
+    [referrer]            VARCHAR (2000) NULL,
+    [amount]              MONEY          NOT NULL,
+    [delivery]            MONEY          NOT NULL,
+    [return]              MONEY          NOT NULL,
+    [amountwithoutreturn] MONEY          NULL,
+    [delivery_fact]       MONEY          NULL,
+    [volTK]               MONEY          NULL,
+    [wtTK]                MONEY          NULL,
+    [volOur]              MONEY          NULL,
+    [wtOur]               MONEY          NULL,
+    [ai_trID]             VARCHAR (50)   NULL,
+    CONSTRAINT [PK_SalesoOrd_fact] PRIMARY KEY CLUSTERED ([date] ASC, [id] ASC)
+);
+
