@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.3.32929.385
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32929.386
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "Logistic_Cube", "Stock_Cube_AS_V2\Logistic_Cube.dwproj", "{8FEA9D89-5DE6-4E55-992B-0576055C583F}"
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "OLAP_DATA", "OLAP_DATA\OLAP_DATA.sqlproj", "{34B02132-2A7A-428B-9E2E-51D19A9B88F1}"
+EndProject
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "SSIS OLAP", "SSIS OLAP\SSIS OLAP.dtproj", "{1315ADA6-A8AC-4DFA-BFBD-B0223C4B3042}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,14 @@ Global
 		{34B02132-2A7A-428B-9E2E-51D19A9B88F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{34B02132-2A7A-428B-9E2E-51D19A9B88F1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{34B02132-2A7A-428B-9E2E-51D19A9B88F1}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{1315ADA6-A8AC-4DFA-BFBD-B0223C4B3042}.Debug|Any CPU.ActiveCfg = Development
+		{1315ADA6-A8AC-4DFA-BFBD-B0223C4B3042}.Debug|Any CPU.Build.0 = Development
+		{1315ADA6-A8AC-4DFA-BFBD-B0223C4B3042}.Development|Any CPU.ActiveCfg = Development
+		{1315ADA6-A8AC-4DFA-BFBD-B0223C4B3042}.Development|Any CPU.Build.0 = Development
+		{1315ADA6-A8AC-4DFA-BFBD-B0223C4B3042}.Production|Any CPU.ActiveCfg = Development
+		{1315ADA6-A8AC-4DFA-BFBD-B0223C4B3042}.Production|Any CPU.Build.0 = Development
+		{1315ADA6-A8AC-4DFA-BFBD-B0223C4B3042}.Release|Any CPU.ActiveCfg = Development
+		{1315ADA6-A8AC-4DFA-BFBD-B0223C4B3042}.Release|Any CPU.Build.0 = Development
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
