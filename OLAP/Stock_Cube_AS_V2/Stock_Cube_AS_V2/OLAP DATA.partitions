@@ -1,17 +1,17 @@
-﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="9316e2c6-5ec7-404d-95f8-fa392533462e" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="c0d335bd-04c5-4725-a1c4-a308dc008069" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>OLAP DATA</ID>
   <MeasureGroups>
     <MeasureGroup>
       <ID>Sales Fact</ID>
       <Partitions>
-        <Partition dwd:design-time-name="0397f3f4-0579-4688-9604-3febe3a84f6d">
+        <Partition dwd:design-time-name="68f394af-1627-4b79-bad8-ed1877794322">
           <ID>Sales Fact</ID>
           <Name>Sales Fact</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="DsvTableBinding" dwd:design-time-name="5a742501-7d1a-4ac6-bbd6-ee098632dbbc">
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="de048cc3-5509-4789-b187-dfc79483399a">
             <DataSourceViewID>OLAP DATA</DataSourceViewID>
             <TableID>dbo_Sales_fact</TableID>
           </Source>
@@ -24,14 +24,14 @@
     <MeasureGroup>
       <ID>Ostatq Fact</ID>
       <Partitions>
-        <Partition dwd:design-time-name="5ae3ea5b-eb27-474f-a362-407e71341cfb">
+        <Partition dwd:design-time-name="0ff73b87-f029-48a0-b842-e2f446fcb886">
           <ID>Ostatq Fact</ID>
           <Name>Ostatq Fact</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="DsvTableBinding" dwd:design-time-name="1d94f827-0228-4193-a3eb-c3a889c4a96f">
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="da87ed0e-ebea-49e3-873c-7bec0400776d">
             <DataSourceViewID>OLAP DATA</DataSourceViewID>
             <TableID>dbo_Ostatq_fact</TableID>
           </Source>
@@ -44,16 +44,56 @@
     <MeasureGroup>
       <ID>Ostatq No Parcel Fact</ID>
       <Partitions>
-        <Partition dwd:design-time-name="df056efc-331b-42d9-92bf-5ecdd00f73d0">
+        <Partition dwd:design-time-name="e436b39e-182a-43ee-bdc2-627607429ebb">
           <ID>Ostatq No Parcel Fact</ID>
           <Name>Ostatq No Parcel Fact</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="DsvTableBinding" dwd:design-time-name="1b3d76eb-0e84-4178-b081-9b5c30a7c812">
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="b092d0be-736b-4ab7-a4a9-da2d30274d7c">
             <DataSourceViewID>OLAP DATA</DataSourceViewID>
             <TableID>Ostatq</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Turnover Fact</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="d6d05885-13a7-4aa1-84fd-528f96ce6699">
+          <ID>Turnover Fact</ID>
+          <Name>Turnover Fact</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="9bc9d571-5c12-46e0-94c3-9dbf57853a02">
+            <DataSourceViewID>OLAP DATA</DataSourceViewID>
+            <TableID>bi_Turnover_fact</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Illiquuid Goods Fact</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="d25d4619-993d-4cf1-a512-512c25e55387">
+          <ID>Illiquuid Goods Fact</ID>
+          <Name>Illiquuid Goods Fact</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="c034cb7e-e987-4c80-9da8-4933c7409be8">
+            <DataSourceViewID>OLAP DATA</DataSourceViewID>
+            <TableID>bi_IlliquuidGoods_fact</TableID>
           </Source>
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
