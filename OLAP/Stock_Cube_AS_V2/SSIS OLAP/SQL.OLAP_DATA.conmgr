@@ -7,6 +7,6 @@
     <DTS:ConnectionManager
       DTS:ConnectRetryCount="1"
       DTS:ConnectRetryInterval="5"
-      DTS:ConnectionString="Data Source=10.110.10.19;Initial Catalog=OLAP_DATA;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-SSIS OLAP-{10F0B01B-1694-4178-A3AF-10408D334F2A}10.110.10.19.OLAP_DATA;Auto Translate=False;" />
+      DTS:ConnectionString="Data Source=venetsql;Initial Catalog=OLAP_DATA;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-SSIS OLAP-{10F0B01B-1694-4178-A3AF-10408D334F2A}10.110.10.19.OLAP_DATA;" />
   </DTS:ObjectData>
 </DTS:ConnectionManager>

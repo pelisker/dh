@@ -74,7 +74,7 @@
           <ConfigurationSetting>
             <Id>OLAP DATA</Id>
             <Name>OLAP DATA</Name>
-            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=10.110.10.19;Integrated Security=SSPI;Initial Catalog=OLAP_DATA</Value>
+            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=venetsql;Integrated Security=SSPI;Initial Catalog=OLAP_DATA</Value>
           </ConfigurationSetting>
         </ConnectionMappings>
         <ConnectionSecurityMappings>
