@@ -47,6 +47,10 @@
       <Name>Times.dim</Name>
       <FullPath>Times.dim</FullPath>
     </ProjectItem>
+    <ProjectItem>
+      <Name>Типы продаж.dim</Name>
+      <FullPath>Типы Продаж.dim</FullPath>
+    </ProjectItem>
   </Dimensions>
   <DataSources>
     <ProjectItem>
